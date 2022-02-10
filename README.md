@@ -5,12 +5,12 @@ This is the submission for the technical assessment as a part of Taboola intervi
 Question 1:
 File: QuestionOne.java
 
-This contains the solution to question 1. The program handles basic error handling. The program can convert the input to any integer within 32-bit integer range.
+This contains the solution to question 1. The program uses standard input to receive the input and the output is printed on the standard output. The program handles basic error handling. The program can convert the input to any integer within 32-bit integer range.
 
 Question 2:
 File: QuestionTwo.java
 
-This contains the solution to question 2.
+This contains the solution to question 2. The program uses standard input to receive the input and the output is printed on the standard output.
 
 Question 3:
 File: QuestionThree-Sql.txt
