@@ -30,7 +30,7 @@ public class QuestionOne {
     /*
     Method to perform preliminary checks on the input and later print the result
      */
-    private void computeAndPrint(String inputStr) {
+    public void computeAndPrint(String inputStr) {
 
         int convertedInt=0;
         int pos = 0;
