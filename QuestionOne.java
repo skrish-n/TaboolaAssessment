@@ -32,35 +32,28 @@ public class QuestionOne {
      */
     private void computeAndPrint(String inputStr) {
 
-        boolean neg = false;
         int convertedInt=0;
-        boolean isNotInt=false;
         int pos = 0;
 
         //checking if string is empty
-        if(pos==inputStr.length()){
-            isNotInt=true;
-        }
-        else {
-            //To handle negative integers
-            if (inputStr.charAt(0) == '-') {
-                neg = true;
-                pos = 1;
-            }
-
-            //try to convert string to int
-            try {
-                convertedInt = stringToInt(inputStr, pos);
-                if (neg)
-                    convertedInt = -convertedInt;
-            } catch (Exception e) {
-                isNotInt = true;
-            }
-        }
-        if(isNotInt)
+        if(pos==inputStr.length()) {
             System.out.println("Invalid input");
-        else
-            System.out.println("The converted integer: " + convertedInt);
+            return;
+        }
+        //try to convert string to int
+        try {
+            //Handling negative numbers
+            if(inputStr.charAt(0)=='-') {
+                convertedInt = stringToInt(inputStr, 1);
+                convertedInt = -convertedInt;
+            }
+            else
+                convertedInt = stringToInt(inputStr, 0);
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+            return;
+        }
+        System.out.println("The converted integer: " + convertedInt);
     }
 
     public static void main(String[] args){
